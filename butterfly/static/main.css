@@ -70,37 +70,37 @@
 /* along with this program.  If not, see <http://www.gnu.org/licenses/>. */
 @font-face {
   font-family: "SourceCodePro";
-  src: url("/static/fonts/SourceCodePro-ExtraLight.otf") format("woff");
+  src: url("https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqZCDkYQxybH_Rl7Qv7ee2N4.woff2") format('woff2');
   font-weight: 100; }
 
 @font-face {
   font-family: "SourceCodePro";
-  src: url("/static/fonts/SourceCodePro-Light.otf") format("woff");
+  src: url("https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqeode0-EuMkY--TSyExeINg.woff2") format('woff2');
   font-weight: 300; }
 
 @font-face {
   font-family: "SourceCodePro";
-  src: url("/static/fonts/SourceCodePro-Regular.otf") format("woff");
+  src: url("https://fonts.gstatic.com/s/sourcecodepro/v6/mrl8jkM18OlOQN8JLgasD9V_2ngZ8dMf8fLgjYEouxg.woff2") format('woff2');
   font-weight: 400; }
 
 @font-face {
   font-family: "SourceCodePro";
-  src: url("/static/fonts/SourceCodePro-Medium.otf") format("woff");
+  src: url("https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqWPwYXaUNREbAUyQ5RuiVI0.woff2") format('woff2');
   font-weight: 500; }
 
 @font-face {
   font-family: "SourceCodePro";
-  src: url("/static/fonts/SourceCodePro-Semibold.otf") format("woff");
+  src: url("https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqSOFnW3Jk0f09zW_Yln67Ac.woff2") format('woff2');
   font-weight: 600; }
 
 @font-face {
   font-family: "SourceCodePro";
-  src: url("/static/fonts/SourceCodePro-Bold.otf") format("woff");
+  src: url("https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqVxe-GPfKKFmiXaJ_Q0GFr8.woff2") format('woff2');
   font-weight: 700; }
 
 @font-face {
   font-family: "SourceCodePro";
-  src: url("/static/fonts/SourceCodePro-Black.otf") format("woff");
+  src: url("https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqXZhYM0_6AejPZE-OqA592o.woff2") format('woff2');
   font-weight: 900; }
 
 body {
