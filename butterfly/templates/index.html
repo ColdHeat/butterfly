@@ -20,10 +20,10 @@
         data-session-token={{ session }}>
     <div id="popup" class="hidden">
     </div>
-    <script src="{{ options.uri_root_path }}{{ static_url('html-sanitizer.js') }}"></script>
-    <script src="{{ options.uri_root_path }}{{ static_url('main.%sjs' % (
+    <script src="/{{ options.uri_root_path }}{{ static_url('html-sanitizer.js') }}"></script>
+    <script src="/{{ options.uri_root_path }}{{ static_url('main.%sjs' % (
                  '' if options.unminified else 'min.')) }}"></script>
-    <script src="{{ options.uri_root_path }}{{ static_url('ext.%sjs' % (
+    <script src="/{{ options.uri_root_path }}{{ static_url('ext.%sjs' % (
                  '' if options.unminified else 'min.')) }}"></script>
     <script src="{{ reverse_url('LocalJsStatic') }}"></script>
     <div id="packed"></div>
