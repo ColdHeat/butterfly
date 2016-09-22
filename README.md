@@ -2,6 +2,23 @@
 
 ![](http://paradoxxxzero.github.io/assets/butterfly_2.0_1.gif)
 
+```
+FROM ubuntu
+
+RUN apt-get update
+RUN apt-get install -y libffi-dev libssl-dev git python-pip
+RUN pip install git+https://github.com/ColdHeat/butterfly.git
+RUN echo "root\nroot\n" | passwd root
+
+EXPOSE 8888
+```
+
+```
+docker pull jupyter/minimal-notebook
+export TOKEN=$( head -c 30 /dev/urandom | xxd -p )
+docker run --net=host -d -e CONFIGPROXY_AUTH_TOKEN=$TOKEN --name=proxy jupyter/configurable-http-proxy --default-target http://127.0.0.1:9999 --no-include-prefix
+docker run --net=host -d -e CONFIGPROXY_AUTH_TOKEN=$TOKEN -v /var/run/docker.sock:/docker.sock jupyter/tmpnb python orchestrate.py --image='butterfly' --command="butterfly.server.py --unsecure --uri_root_path='{base_path}' --port='{port}' --host=0.0.0.0"
+```
 
 ## Description
 

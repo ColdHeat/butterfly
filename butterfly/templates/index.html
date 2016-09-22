@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Butterfly - A web terminal based on websocket and tornado">
     <meta name="author" content="Mounier Florian">
-    <link rel="shortcut icon" href="{{ static_url('images/favicon.png') }}">
+    <link rel="shortcut icon" href="/{{ options.uri_root_path }}{{ static_url('images/favicon.png') }}">
 
     <title>Butterfly</title>
-    <link href="{{ static_url('main.css') }}" rel="stylesheet" id="style">
+    <link href="/{{ options.uri_root_path }}{{ static_url('main.css') }}" rel="stylesheet" id="style">
   </head>
 
   <body spellcheck="false"
