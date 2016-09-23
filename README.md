@@ -20,6 +20,19 @@ docker run --net=host -d -e CONFIGPROXY_AUTH_TOKEN=$TOKEN --name=proxy jupyter/c
 docker run --net=host -d -e CONFIGPROXY_AUTH_TOKEN=$TOKEN -v /var/run/docker.sock:/docker.sock jupyter/tmpnb python orchestrate.py --image='butterfly' --redirect-uri="" --command="butterfly.server.py --unsecure --uri_root_path='{base_path}' --port='{port}' --host=0.0.0.0"
 ```
 
+```
+server {
+        listen 80;
+        location / {
+                proxy_pass  http://127.0.0.1:8000;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "upgrade";
+                proxy_set_header Host $host;
+        }
+}
+```
+
 ## Description
 
 Butterfly is a xterm compatible terminal that runs in your browser.
