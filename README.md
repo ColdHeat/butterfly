@@ -9,6 +9,7 @@ RUN apt-get update
 RUN apt-get install -y libffi-dev libssl-dev git python-pip
 RUN pip install git+https://github.com/ColdHeat/butterfly.git
 RUN echo "root\nroot\n" | passwd root
+RUN export PATH=$(cat /etc/environment)
 
 EXPOSE 8888
 ```
