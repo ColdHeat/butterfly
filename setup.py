@@ -39,7 +39,7 @@ options = dict(
             'static/images/favicon.png',
             'static/main.css',
             'static/html-sanitizer.js',
-            'static/*.min.js',
+            'static/*.js',
             'templates/index.html',
             'bin/*',
             'templates/motd',
