@@ -30,7 +30,7 @@
     wsUrl += document.location.host + rootPath;
     path = location.pathname;
     if (path.indexOf('/session') < 0) {
-      path += "session/" + (document.body.getAttribute('data-session-token'));
+      path = "/session/" + (document.body.getAttribute('data-session-token'));
     }
     path += location.search;
     ws.shell = new WebSocket(wsUrl + '/ws' + path);
