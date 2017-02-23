@@ -243,18 +243,18 @@ class Terminal(object):
                 tornado.options.options.pam_profile], env)
 
         # Unsecure connection with su
-        if server.root:
-            if self.socket.local:
-                if self.callee != self.caller:
-                    # Force password prompt by dropping rights
-                    # to the daemon user
-                    os.setuid(daemon.uid)
-            else:
-                # We are not local so we should always get a password prompt
-                if self.callee == daemon:
-                    # No logging from daemon
-                    sys.exit(1)
-                os.setuid(daemon.uid)
+        # if server.root:
+        #     if self.socket.local:
+        #         if self.callee != self.caller:
+        #             # Force password prompt by dropping rights
+        #             # to the daemon user
+        #             os.setuid(daemon.uid)
+        #     else:
+        #         # We are not local so we should always get a password prompt
+        #         if self.callee == daemon:
+        #             # No logging from daemon
+        #             sys.exit(1)
+        #         os.setuid(daemon.uid)
 
         if os.path.exists('/usr/bin/su'):
             args = ['/usr/bin/su']
